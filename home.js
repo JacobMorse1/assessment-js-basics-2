@@ -81,8 +81,15 @@ const canWeDeliver = zipcode => {
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+const canWeDeliverTwo = zipcode => {
+    if(deliveryAreaZipCodes.includes(zipcode)) {
+        return "You're in our delivery zone!"
+    } //else if(deliveryAreaZipCodes.includes(zipcode) !== true)
+    return "Sorry we can't deliver to that address."
+}
+    
 
+// console.log(canWeDeliverTwo(85226))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -117,8 +124,9 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
+const newDeal = deals.replace('15', '10')
 
+console.log(newDeal)
 
 
 /*

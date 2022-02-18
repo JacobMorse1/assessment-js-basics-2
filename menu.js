@@ -30,7 +30,14 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
+    name : 'Garbage Pile',
+    price : 11.99,
+    category: 'Entree',
+    popularity: 1,
+    rating: 9.8,
+    tags: ['high in fat', 'not for childeren', 'must sign waiver'],
+}
 
 
 
@@ -42,7 +49,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -52,7 +59,8 @@
     get the value.
 */
 
-//CODE HERE
+// let myTags = pizza.tags
+console.log(pizza.tags[1])
 
 
 /*
@@ -62,7 +70,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+let {price} = pizza
+console.log(price)
 
 
 /*
@@ -72,7 +81,8 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,7 +97,42 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
+let foodArr = [{
+    name : 'Death by Meat',
+    price : 10.99,
+    category: 'Entree',
+    popularity: 3,
+    rating: 8.9,
+    tags: ['high in meat', 'for the carnivores', 'bbq sauce optional'],
+}, {
+    name : 'Garbage Pile',
+    price : 11.99,
+    category: 'Entree',
+    popularity: 1,
+    rating: 9.8,
+    tags: ['high in fat', 'not for childeren', 'must sign waiver'],
+}, {
+    name : 'Veggie Bonaza',
+    price : 9.99,
+    category: 'Entree',
+    popularity: 2,
+    rating: 9.4,
+    tags: ['rabbit food', 'no meat', 'an abomination'],
+}, {
+    name : 'Gluten Free',
+    price : 15.99,
+    category: 'Entree',
+    popularity: 5,
+    rating: 7.8,
+    tags: ['gluten free', 'why even eat pizza?', 'soy free'],
+}, {
+    name : 'Hot Going in, Hot coming out',
+    price : 12.99,
+    category: 'Entree',
+    popularity: 4,
+    rating: 8.5,
+    tags: ['Extremely Spicy', 'adults only', 'not recommended'],
+}]
 
 
 
@@ -103,10 +148,7 @@
     your food objects has.
 */
 
-//CODE HERE
-
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+const filteredFood = foodArr.filter((elements))
 
 
 //////////////////PROBLEM 5////////////////////

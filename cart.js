@@ -35,8 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((runTot, curElem) => runTot + curElem)
 
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -78,7 +79,14 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    Name: to be able to track order and for pickup and receiving payments through credit cards
+    Order: track what kind of food the customer wants
+    Prices: This includes prices of any food
+    Credit Card Info: for payment
+    Name: String
+    Order: String
+    Prices: Number
+    Credit Card Info: array
 
 */
 
@@ -88,3 +96,11 @@ const cart = [
 */
 
 //CODE HERE
+
+const Customer = {
+    name: 'jake',
+    order: 'food',
+    price: 5.99,
+    credit card info: [6669410496851231, 1026, 668]
+
+}
