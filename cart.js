@@ -101,6 +101,6 @@ const Customer = {
     name: 'jake',
     order: 'food',
     price: 5.99,
-    credit card info: [6669410496851231, 1026, 668]
+    creditcardinfo: [6669410496851231, 1026, 668]
 
 }
