@@ -51,18 +51,33 @@ const greetUser = username => `Welcome back, ${username}.`
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-const canWeDeliver = zipcode => {
-    let goodZips = deliveryAreaZipCodes.length
-    for(let i = 0; i < goodZips; i++) {
-        // console.log(deliveryAreaZipCodes[i])
-        if(deliveryAreaZipCodes[i] === zipcode) {
-            return "You're in our delivery zone!"
+const canWeDeliver = (zipcode) => {
+    let inZone = false
+    deliveryAreaZipCodes.forEach((ele) => {
+        if(zipcode === ele) {
+            inZone === true
         }
+    })
+
+    if(inZone){
+        return "You're in our delivery zone!"
+    } else {
+        return "Sorry can't deliver to that address."
     }
-    return "Sorry, we can't deliver to that address."
 }
 
-// console.log(canWeDeliver(85206))
+// const canWeDeliver = zipcode => {
+//     let goodZips = deliveryAreaZipCodes.length
+//     for(let i = 0; i < goodZips; i++) {
+//         // console.log(deliveryAreaZipCodes[i])
+//         if(deliveryAreaZipCodes[i] === zipcode) {
+//             return "You're in our delivery zone!"
+//         }
+//     }
+//     return "Sorry, we can't deliver to that address."
+// }
+
+console.log(canWeDeliver(85206))
 
 /* 
     Problem 2 Continued
@@ -124,9 +139,10 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-const newDeal = deals.replace('15', '10')
+deals[0].title = deals[0].title.replace('15', '10')
 
-console.log(newDeal)
+console.log(deals[0] ['title'])
+
 
 
 /*

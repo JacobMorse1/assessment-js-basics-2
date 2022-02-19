@@ -147,9 +147,14 @@ let foodArr = [{
     You can check for any tag that at least 1 of
     your food objects has.
 */
+let filterWord ='gluten free'
 
-const filteredFood = foodArr.filter((elements))
+const filteredFood = foodArr.filter((item, index) => {
+    // console.log(item.tags)
+    return item.tags.includes(filterWord)
+})
 
+// console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -191,7 +196,18 @@ const filteredFood = foodArr.filter((elements))
 */
 
 //CODE HERE
+const filteredByProperty = (property, number, type) => {
+    const filtered = foodArr.filter((element) => {
+        if(type === 'above'){
+            if(element[property] > number){
 
+            }
+        }
+    })
+    return filtered
+}
+
+console.log(filteredByProperty())
 
 /*
     Invoke the `filterByProperty` function passing
