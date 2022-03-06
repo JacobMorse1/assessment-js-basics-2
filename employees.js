@@ -20,8 +20,15 @@
 */
 
 //CODE HERE
-
-
+class Employee {
+    constructor(name, shifts){
+        this.name = name;
+        this.shifts = shifts;
+    }
+    getSchedule() {
+        console.log(this.name, 'works on', this.shifts)
+    }
+}
 
 /*
     Create a new instance of your class.
@@ -34,6 +41,7 @@
 */
 
 //CODE HERE
+let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 
 /*
     Call the `getSchedule` method on the
@@ -41,6 +49,7 @@
 */
 
 //CODE HERE
+empOne.getSchedule()
 
 
 /*
@@ -56,7 +65,9 @@
 */
 
 //CODE HERE
+// let empTwo = [...empOne] //received err that 'empOne' wasn't iterable.
 
+// console.log(empTwo)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -83,6 +94,19 @@
 */
 
 //CODE HERE
+class Manager extends Employee {
+    constructor(name, shifts, employees){
+        super(name, shifts)
+        this.employees = employees
+    }
+    getEmployees(){
+        console.log(this.name, 'manages', this.employees)
+    }
+    addEmployee(emp) {
+        employees.push(emp)
+        console.log(this.employees)
+    }
+}
 
 
 
@@ -98,6 +122,7 @@
 */
 
 //CODE HERE
+let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', [Cece, Schmidt])
 
 
 /*
@@ -106,6 +131,7 @@
 */
 
 //CODE HERE
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -114,6 +140,7 @@
 */
 
 //CODE HERE 
+manager.addEmployee('Coach')
 
 /*
     Call the `getEmployees` method on the
@@ -122,3 +149,4 @@
 */
 
 //CODE HERE
+manager.getEmployees()
